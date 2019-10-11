@@ -39,6 +39,7 @@ var divide = function(a, b) {
 var getOperand = function() {
   operator = screen.innerHTML.match(/[+\-*/]/);
   return arrayOfOperand = screen.innerHTML.split(operator[0]);
+<<<<<<< HEAD
 }
 
 var getOperation = function() {
@@ -62,6 +63,27 @@ var getOperation = function() {
   // return window["add"](parseInt(arrayOfOperand[0]), parseInt(arrayOfOperand[1]))
 }
 
+=======
+}
+
+var getOperation = function() {
+  operator = screen.innerHTML.match(/[+\-*/]/);
+  switch (operator[0]) {
+    case "+":
+      fn = add
+      break;
+    case "-":
+      fn = substract
+      break;
+    case "*":
+      fn = multiply
+      break;
+    case "/":
+      fn = divide
+  }
+}
+
+>>>>>>> wip
 var calculate = function() {
   return fn(parseInt(arrayOfOperand[0]), parseInt(arrayOfOperand[1]))
 }
